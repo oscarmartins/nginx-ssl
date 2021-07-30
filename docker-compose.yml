@@ -11,10 +11,12 @@ services:
         ports:
             - 80:80
             - 443:443
+# --force-renewal
+# --expand
 
     certbot:
         image: certbot/certbot:latest
-        command: certonly --webroot --webroot-path=/var/www/certbot --email oscarrafaelcampos@gmail.com --agree-tos --no-eff-email --force-renewal -d winpegasus.pt -d www.winpegasus.pt -d api.winpegasus.pt -d www.api.winpegasus.pt --expand
+        command: certonly --webroot --webroot-path=/var/www/certbot --email oscarrafaelcampos@gmail.com --agree-tos --no-eff-email  -d winpegasus.pt -d www.winpegasus.pt -d api.winpegasus.pt -d www.api.winpegasus.pt 
         volumes:
             - ./certbot/conf:/etc/letsencrypt
             - ./certbot/logs:/var/log/letsencrypt
