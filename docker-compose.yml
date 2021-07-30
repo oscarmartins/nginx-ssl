@@ -11,8 +11,9 @@ services:
         ports:
             - 80:80
             - 443:443
-# --force-renewal
-# --expand
+
+    # --force-renewal
+    # --expand deve existir o certrificado principal para podermos gerar o certf para os subdominios
 
     certbot:
         image: certbot/certbot:latest
