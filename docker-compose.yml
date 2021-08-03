@@ -17,7 +17,7 @@ services:
 
     certbot:
         image: certbot/certbot:latest
-        command: certonly --webroot --webroot-path=/var/www/certbot --email oscarrafaelcampos@gmail.com --agree-tos --no-eff-email  -d winpegasus.pt -d www.winpegasus.pt -d api.winpegasus.pt -d www.api.winpegasus.pt 
+        command: certonly --webroot --webroot-path=/var/www/certbot --email oscarrafaelcampos@gmail.com --agree-tos --no-eff-email  -d winpegasus.pt -d www.winpegasus.pt -d services.winpegasus.pt -d www.services.winpegasus.pt 
         volumes:
             - ./certbot/conf:/etc/letsencrypt
             - ./certbot/logs:/var/log/letsencrypt
